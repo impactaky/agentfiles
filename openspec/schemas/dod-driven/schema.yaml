@@ -1,6 +1,6 @@
 name: dod-driven
-version: 1
-description: Default OpenSpec workflow - proposal → specs → design → tasks
+version: 2
+description: DoD workflow
 artifacts:
   - id: dod
     generates: dod.md
@@ -17,6 +17,11 @@ artifacts:
 
       Usually the user provides the DoD content. If not, derive it from the
       proposal, specs, design, and tasks.
+
+      If there are any gray areas, ambiguities, or decisions that would make a
+      DoD item non-specific or non-verifiable, ask the user targeted
+      clarification questions and continue doing so until those gray areas are
+      resolved or explicitly confirmed as intentionally undefined.
 
       Sections:
 

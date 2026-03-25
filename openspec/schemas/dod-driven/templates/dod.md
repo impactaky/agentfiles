@@ -17,3 +17,7 @@
 
 - [ ] 2.1 <!-- Task description -->
 - [ ] 2.2 <!-- Task description -->
+
+## Undefined
+
+- <!-- Open question, blocked validation, or intentionally undefined item -->
