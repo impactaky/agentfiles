@@ -1,23 +1,23 @@
 # Workflow
 
-This is the workflow to develop.
 You need to follow the steps strictly.
 Proceed through the steps autonomously unless blocked, destructive approval is required, or user input is necessary to resolve ambiguity.
+If `.myagents/dod.md` exists, treat user comments as feedback on the current workflow until it is archived.
 
 ## Steps
 
 ### 1. Prepare DoD
 
 - [ ] Confirm the relevant facts from the user request and current repository context
-- [ ] Create `dod.md` with Facts, Required changes, Constraints, Verification, Open Questions, and Deferred
-- [ ] If `Open Questions` is non-empty, ask the user in one batch and update `dod.md`
+- [ ] Create `.myagents/dod.md` with Facts, Required changes, Constraints, Verification, Open Questions, and Deferred
+- [ ] If `Open Questions` is non-empty, ask the user in one batch and update `.myagents/dod.md`
 - [ ] Do not proceed to implementation while `Open Questions` is non-empty
 
 ### 2. Implement And Review
 
 - [ ] Loop until implementation and review pass. Up to 5 times.
-  - [ ] Implement the change to satisfy `dod.md` in `programmer` agent
-  - [ ] Review the implementation against `dod.md` and `project-rules.md` if present in `reviewer` agent
+  - [ ] Implement the change to satisfy `.myagents/dod.md` in `programmer` agent
+  - [ ] Review the implementation against `.myagents/dod.md` and `project-rules.md` if present in `reviewer` agent
 
 ### 3. Report And Iterate
 
@@ -26,7 +26,7 @@ Proceed through the steps autonomously unless blocked, destructive approval is r
 
 ### 4. Finalize
 
-- [ ] Update `dod.md` to match the final result
+- [ ] Update `.myagents/dod.md` to match the final result
 - [ ] Ensure `Open Questions` is empty
 - [ ] Save a copy to `.myagents/artifacts/dod/<task-summary>-<YYYYMMDD-HHMMSS>.md`
 - [ ] If the feedback is essential, reflect it in `project-rules.md` to improve future runs.
