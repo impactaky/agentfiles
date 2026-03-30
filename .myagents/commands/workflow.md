@@ -12,7 +12,8 @@ It may include DoD content.
 ## Output
 
 DoD check report.
-Explain how each DoD is satisfied by the implementation.
+Explain how the implementation satisfies the required changes and verification items,
+grounded in the collected facts.
 Output the DoD report in Japanese.
 
 ## Steps

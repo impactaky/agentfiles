@@ -1,15 +1,16 @@
 # Project Rules
 
-Use these project-specific rules when writing or reviewing a DoD report.
+Use this file only for project-specific rules when writing or reviewing a DoD report.
+Put generic workflow or generic `dod.md` structure rules in `.myagents/commands/`.
 
 ## Required
 
-<!-- - `MUST`: Description -->
+<!-- - `MUST`: Project-specific requirement -->
 
 ## Recommended
 
-<!-- - `SHOULD`: Description -->
+<!-- - `SHOULD`: Project-specific recommendation -->
 
 ## Avoid
 
-<!-- - `AVOID`: Description -->
+<!-- - `AVOID`: Project-specific anti-pattern -->

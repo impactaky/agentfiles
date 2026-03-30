@@ -1,6 +1,6 @@
 # Make DoD
 
-Create or update `dod.md`.
+Create `dod.md`.
 
 ## Input
 
@@ -12,23 +12,37 @@ User request describing the desired change.
 
 ## Steps
 
-- [ ] Draft `dod.md` from the user request and current repository context
-- [ ] If `Must Resolve` is non-empty, ask the user and update `dod.md`
+- [ ] Confirm the relevant facts from the user request and current repository context
+- [ ] Derive `Required changes based on facts`
+- [ ] Define `Verification`
+- [ ] Put unresolved blocking items in `Open Questions`
+- [ ] Put safe-to-postpone items in `Deferred`
+- [ ] If `Open Questions` is non-empty, ask the user in one batch and update the items
+- [ ] Write the final items to `dod.md`
 
 ## `dod.md` Format
 
 ```md
 # Definition of done
 
-## DoD list
+## Facts
 
-### 1. <Group name>
+- [ ] <Confirmed fact from the repository, API, requirements, or runtime behavior>
+- [ ] <Why this fact matters to the requested change>
 
-- [ ] <Specific, verifiable completion criterion>
+## Required changes based on facts
 
-## Must Resolve
+- [ ] <Concrete change that becomes necessary once the facts above are confirmed>
+- [ ] <Scope or implementation constraint derived from those facts>
 
-- <Critical gray area that must be resolved before the DoD is finalized>
+## Verification
+
+- [ ] <How to confirm the change is correct>
+- [ ] <Command, test, manual check, or review point with a verifiable result>
+
+## Open Questions
+
+- <Critical ambiguity that blocks confirmation, change design, or verification>
 
 ## Deferred
 
@@ -37,9 +51,5 @@ User request describing the desired change.
 
 ## Rules
 
-- Keep `Content` specific and verifiable
-- Use `Must Resolve` for gray areas that affect scope, implementation direction,
-  verification, or user-visible impact
-- Use `Deferred` for unresolved items that are safe to postpone
-- Do not ask one question at a time while drafting; batch critical review points
-- Do not proceed to implementation while `Must Resolve` is non-empty
+- Keep items specific and verifiable
+- Do not proceed to implementation while `Open Questions` is non-empty
