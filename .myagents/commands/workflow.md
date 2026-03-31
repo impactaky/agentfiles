@@ -25,13 +25,13 @@ Repeat until implementation and review pass, up to 5 times.
 
 - [ ] Output the DoD check report in Japanese.
 - [ ] Wait for user review. If you get feedback, rerun the implementation loop.
+- [ ] If the review caused you to change behavior or code to address a pointed-out issue, consider updating `project-rules.md` to prevent recurrence before the next implementation/review cycle.
 
 ### 4. Finalize
 
 - [ ] Update `.myagents/dod.md` to match the final result
 - [ ] Ensure `Open Questions` is empty
 - [ ] Save a copy to `.myagents/artifacts/dod/<task-summary>-<YYYYMMDD-HHMMSS>.md`
-- [ ] If the workflow exposed a reusable project-specific rule, reflect it in `project-rules.md`.
 
 ## `dod.md` Format
 
