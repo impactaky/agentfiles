@@ -2,34 +2,7 @@
 
 You need to follow the steps strictly.
 Proceed through the steps autonomously unless blocked, destructive approval is required, or user input is necessary to resolve ambiguity.
-If `.myagents/dod.md` exists, treat user comments as feedback on the current workflow until it is archived.
-
-## Steps
-
-### 1. Prepare DoD
-
-- [ ] Confirm the relevant facts from the user request and current repository context
-- [ ] If critical ambiguity remains, ask the user in one batch before implementation
-- [ ] Create `.myagents/dod.md` with User request, Relevant context, Required changes, Constraints, Verification for user request, and Deferred
-
-### 2. Implement And Review
-
-Repeat until implementation and review pass, up to 5 times.
-
-- [ ] You may add scaffolding tests during implementation, but remove them before finishing. Keep only tests for the user request
-- [ ] Implement the change to satisfy `.myagents/dod.md` in `programmer` agent
-- [ ] Review the implementation against `.myagents/dod.md` and `project-rules.md` if present in `reviewer` agent
-
-### 3. Report And Iterate
-
-- [ ] Output the DoD check report in Japanese.
-- [ ] Wait for user review. If you get feedback, rerun the implementation loop.
-- [ ] If the review caused you to change behavior or code to address a pointed-out issue, consider updating `project-rules.md` to prevent recurrence before the next implementation/review cycle.
-
-### 4. Finalize
-
-- [ ] Update `.myagents/dod.md` to match the final result
-- [ ] Save a copy to `.myagents/artifacts/dod/<task-summary>-<YYYYMMDD-HHMMSS>.md`
+If `.myagents/dod.md` exists, treat user comments as feedback on the current workflow until the task is done.
 
 ## `dod.md` Format
 
@@ -58,3 +31,51 @@ Repeat until implementation and review pass, up to 5 times.
 
 - <Unresolved item that is safe to postpone>
 ```
+
+## Steps
+
+### 1. Prepare DoD
+
+- [ ] Confirm the relevant facts from the user request and current repository context
+- [ ] If critical ambiguity remains, ask the user in one batch before implementation
+- [ ] Create `.myagents/dod.md` with User request, Relevant context, Required changes, Constraints, Verification for user request, and Deferred
+
+### 2. Implement And Internal Review
+
+Repeat until implementation and review pass, up to 5 times.
+
+- [ ] You may add scaffolding tests during implementation, but remove them before finishing. Keep only tests for the user request
+- [ ] Implement the change to satisfy `.myagents/dod.md` in `programmer` agent
+- [ ] Review the implementation against `.myagents/dod.md` and `project-rules.md` if present in `reviewer` agent
+
+### 3. User Review
+
+- [ ] Output the user review report in Japanese
+- [ ] If the user requests follow-up changes, rerun Step 2
+- [ ] If needed, update `project-rules.md` before rerunning Step 2
+
+#### User Reposrt format
+
+```md
+## Review report
+
+### Request
+- <Request>
+
+### Before
+- <Before state>
+- <Why it was not satisfied>
+
+### Resolution
+- [path/to/file.ext:line] <Change>. <Why it matters>
+- [path/to/file.ext:line] <Change>. <Why it matters>
+```
+
+- `Resolution` must cover all meaningful changes.
+- Each bullet must include a file path and line.
+- Each bullet must say what changed and why.
+
+### 4. Archive
+
+- [ ] Save the LGTM report to `.myagents/artifacts/review/<task-summary>-<YYYYMMDD-HHMMSS>.md`
+
