@@ -46,7 +46,7 @@ Repeat until implementation and review pass, up to 5 times.
 
 - [ ] You may add scaffolding tests during implementation, but remove them before finishing. Keep only tests for the user request
 - [ ] Implement the change to satisfy `.myagents/dod.md` in `programmer` agent
-- [ ] Review the implementation against `.myagents/dod.md` and `project-rules.md` if present in `reviewer` agent
+- [ ] Review the implementation against `.myagents/dod.md` and `project-rules.md` in `reviewer` agent
 
 ### 3. User Review
 
