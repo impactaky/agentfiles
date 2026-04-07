@@ -4,6 +4,15 @@ You need to follow the steps strictly.
 Proceed through the steps autonomously unless blocked, destructive approval is required, or user input is necessary to resolve ambiguity.
 If `.myagents/dod.md` exists, treat user comments as feedback on the current workflow until the task is done.
 
+## Principles
+
+- Keep the task small enough that one agent can implement and review it with sufficient attention
+- Prefer simple, reviewable changes
+- Reuse existing libraries and project patterns when they fit
+- Keep only tests tied to the user request
+- Remove scaffolding tests before finishing
+- Use a subagent only when the task is too large, too parallel, or too review-heavy for one focused pass
+
 ## `dod.md` Format
 
 ```md
@@ -40,19 +49,28 @@ If `.myagents/dod.md` exists, treat user comments as feedback on the current wor
 - [ ] If critical ambiguity remains, ask the user in one batch before implementation
 - [ ] Create `.myagents/dod.md` with User request, Relevant context, Required changes, Constraints, Verification for user request, and Deferred
 
-### 2. Implement And Internal Review
+### 2. Implement
 
-Repeat until implementation and review pass, up to 5 times.
+Repeat Steps 2 and 3 until implementation and review pass, up to 5 times.
 
-- [ ] You may add scaffolding tests during implementation, but remove them before finishing. Keep only tests for the user request
-- [ ] Implement the change to satisfy `.myagents/dod.md` in `programmer` agent
-- [ ] Review the implementation against `.myagents/dod.md` and `project-rules.md` in `reviewer` agent
+- [ ] Implement the change to satisfy `.myagents/dod.md`
 
-### 3. User Review
+### 3. Internal Review
 
-- [ ] Output the user review report in Japanese
-- [ ] If the user requests follow-up changes, rerun Step 2
-- [ ] If follow-up fixes a reusable review issue, update `project-rules.md` before rerunning Step 2
+- [ ] Review the implementation against `.myagents/dod.md` and `project-rules.md`
+- [ ] If review finds issues, return to Step 2
+
+#### Review Points
+
+- Check for defects, regressions, test gaps, unnecessary complexity, and avoidable custom code
+- Report findings first, ordered by severity, with file references
+- End review with an explicit pass/fail decision
+
+### 4. User Review
+
+- [ ] Output the user review report
+- [ ] If the user requests follow-up changes, rerun Steps 2 and 3
+- [ ] If follow-up fixes a reusable review issue, update `project-rules.md` before rerunning Steps 2 and 3
 
 #### User Review Format
 
@@ -75,6 +93,6 @@ Repeat until implementation and review pass, up to 5 times.
 - Each bullet must include a file path and line.
 - Each bullet must say what changed and why.
 
-### 4. Archive
+### 5. Archive
 
 - [ ] Save the LGTM report to `.myagents/artifacts/review/<task-summary>-<YYYYMMDD-HHMMSS>.md`
