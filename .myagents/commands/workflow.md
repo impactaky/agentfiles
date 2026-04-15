@@ -43,6 +43,8 @@ If `.myagents/dod.md` exists, treat user comments as feedback on the current wor
 
 ## Steps
 
+Please output `==== X. Phase name ====` before starting each phase.
+
 ### 1. Prepare DoD
 
 - [ ] Confirm the relevant facts from the user request and current repository context
