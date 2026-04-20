@@ -43,7 +43,7 @@ If `.myagents/dod.md` exists, treat user comments as feedback on the current wor
 
 ## Steps
 
-Please output `==== X. Phase name ====` before starting each phase.
+Please output `== X. Phase name ==` before starting each phase
 
 ### 1. Prepare DoD
 
@@ -94,7 +94,3 @@ Repeat Steps 2 and 3 until implementation and review pass, up to 5 times.
 - `Resolution` must cover all meaningful changes.
 - Each bullet must include a file path and line.
 - Each bullet must say what changed and why.
-
-### 5. Archive
-
-- [ ] Save the LGTM report to `.myagents/artifacts/review/<task-summary>-<YYYYMMDD-HHMMSS>.md`
