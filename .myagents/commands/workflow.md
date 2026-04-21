@@ -70,7 +70,7 @@ Repeat Steps 2 and 3 until implementation and review pass, up to 5 times.
 
 ### 4. User Review
 
-- [ ] Output the user review report
+- [ ] Output the user review report. And wait user action. Don't propose next step. Don't commit.
 - [ ] If the user requests follow-up changes, rerun Steps 2 and 3
 - [ ] If follow-up fixes a reusable review issue, update `project-rules.md` before rerunning Steps 2 and 3
 
