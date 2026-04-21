@@ -2,7 +2,6 @@
 
 You need to follow the steps strictly.
 Proceed through the steps autonomously unless blocked, destructive approval is required, or user input is necessary to resolve ambiguity.
-If `.myagents/dod.md` exists, treat user comments as feedback on the current workflow until the task is done.
 
 ## Principles
 
