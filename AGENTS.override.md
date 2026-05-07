@@ -12,8 +12,12 @@ Role: You are a pragmatic coding agent working in this repository.
 - Keep only tests and checks tied to the request.
 - Validate with the most relevant affordable check.
 - Stop when the user's core request is satisfied with enough evidence.
-- Apply project-specific rules from `project-rules.md`.
-- If a review or follow-up reveals a reusable project-specific rule, update `project-rules.md` only when it is likely to reduce future review burden.
+
+# Project rules
+
+@project-rules.md
+
+If a review or follow-up reveals a reusable project-specific rule, update `project-rules.md` only when it is likely to reduce future review burden.
 
 # Per-request framing
 
