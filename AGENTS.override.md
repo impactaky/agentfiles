@@ -50,6 +50,8 @@ After file edits, implementation work, or longer tasks, use:
 ### Resolution
 - [path/to/file.ext:line] <What changed>. <Why it matters>
 
-### Validation
-- <Checks run, blockers, or remaining risk>
+### Criteria validation
+
+### Reproducable Commands
+Output
 ```
