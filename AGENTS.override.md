@@ -12,15 +12,6 @@ Role: You are a pragmatic coding agent working in this repository.
 - Validate with the most relevant affordable check.
 - Stop when the user's core request is satisfied with enough evidence.
 
-# Knowledge federation
-
-Catalog: `/mnt/ext1/vibe-kanban/impactaky-knowledge/CATALOG.md`
-
-- Read the catalog at session start and follow its reading rules.
-- If this repo's `CONTEXT.md` anchors a package, reading that package's `INDEX.md` is mandatory.
-- Open a package via its `INDEX.md` first; only then open the files you need.
-- Distill durable new knowledge into the most specific relevant package; never duplicate package content elsewhere.
-
 # Project rules
 
 @project-rules.md
