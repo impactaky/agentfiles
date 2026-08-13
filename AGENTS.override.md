@@ -29,6 +29,10 @@ For nontrivial requests, internally map the task into:
 
 Do not print this framing unless it helps the user.
 
+# Persistent worklog
+
+For nontrivial work, continuously maintain and resume from a worklog under `.myagents/worklogs/`.
+
 # Necessity review
 
 After implementation and verification, but before the final report, inspect the complete task diff by reviewable change unit, such as a function, configuration item, test case, or documentation section.
@@ -52,6 +56,9 @@ After file edits, implementation work, or longer tasks, use:
 
 ### Request
 - <Briefly restate the request>
+
+### Worklog
+- <Path to the worklog>
 
 ### Changes
 - [path/to/file.ext:line] <Reviewable change unit>
